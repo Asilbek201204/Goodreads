@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+
+{% block content %}
+    <div class="container mt-5"></div>
+    <h1>Book Add</h1>
+    <form method="post"action="{% url 'book_add' %}"enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form}}
+        <button type="submit" class="btn btn-primary">Book Add</button>
+        <a class='btn btn-danger' href="{% url 'books' %}"role="button">Back</a>
+        </a>
+        
+    </form>
+{% endblock content %}

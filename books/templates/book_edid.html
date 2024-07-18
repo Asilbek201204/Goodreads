@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Book Edit</h1>
+    <form method="post" ac>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Book Edit </button>
+        <a href="{% url 'book_edit' book.id %}">
+            <button type="button" class="btn btn-primary">Edit</button>
+        </a>
+        
+    </form>
+{% endblock content %}
